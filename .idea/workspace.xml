@@ -4,29 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d5ca295-8129-4841-a8e7-038bc8f282b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/my_portfolio.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_portfolio/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_portfolio/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_portfolio/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_portfolio/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_portfolio/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/portfolio/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/portfolio/index.html" afterDir="false" />
+    <list default="true" id="6d5ca295-8129-4841-a8e7-038bc8f282b6" name="Changes" comment="Added Host">
+      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/profile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,67 +30,79 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Moss-codes"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Moss-codes/My-Portfolio.git",
+    "accountId": "b8c13664-1bf7-4146-9d5a-6a7510b10a28"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000013301314596" />
-      <entry key="MS500" value="1.069810417842713" />
-      <entry key="S2" value="1.7426176983640844" />
-      <entry key="S5" value="2.3224917251341104" />
-      <entry key="S10" value="2.621498374660698" />
-      <entry key="S30" value="2.8636719525102485" />
-      <entry key="S60" value="2.930477460583444" />
-      <entry key="M2" value="2.9689189694324187" />
-      <entry key="M5" value="3.203078983704733" />
-      <entry key="M10" value="4.19521259370947" />
-      <entry key="M15" value="6.086632699921396" />
-      <entry key="M30" value="13.418366484223956" />
-      <entry key="H1" value="23.60110257459149" />
-      <entry key="H2" value="32.32495330549497" />
-      <entry key="H4" value="38.07081610795939" />
-      <entry key="D1" value="43.753057556802815" />
-      <entry key="W1" value="44.81946873777239" />
-    </decayedCancelled>
-    <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="8.538731185264981E-224" />
-      <entry key="S10" value="4.120703265061737E-112" />
-      <entry key="S30" value="1.1821124978428349E-37" />
-      <entry key="S60" value="5.098830506096677E-19" />
-      <entry key="M2" value="1.2908609548041255E-9" />
-      <entry key="M5" value="7.36048401867013E-4" />
-      <entry key="M10" value="0.06530467615523307" />
-      <entry key="M15" value="0.2935618726264081" />
-      <entry key="M30" value="1.3246965048675134" />
-      <entry key="H1" value="2.8179589399327165" />
-      <entry key="H2" value="4.111436493750594" />
-      <entry key="H4" value="4.966610823474908" />
-      <entry key="D1" value="5.81390184212466" />
-      <entry key="W1" value="5.973053644004805" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="1.8159060139517316E-162" />
+      <entry key="M2" value="2.3349577788968288E-81" />
+      <entry key="M5" value="1.1525282460671108E-32" />
+      <entry key="M10" value="2.578782933475468E-16" />
+      <entry key="M15" value="8.971907596340034E-11" />
+      <entry key="M30" value="4.6979753667408794E-5" />
+      <entry key="H1" value="0.044912595221590766" />
+      <entry key="H2" value="1.496521260846165" />
+      <entry key="H4" value="8.779861332107302" />
+      <entry key="D1" value="38.635360037786306" />
+      <entry key="W1" value="49.8386071416673" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0" />
+      <entry key="M10" value="1.0" />
+      <entry key="M15" value="1.0000000000011153" />
+      <entry key="M30" value="1.0000025820333946" />
+      <entry key="H1" value="1.003934208687021" />
+      <entry key="H2" value="1.153622543915447" />
+      <entry key="H4" value="1.9600432836458581" />
+      <entry key="D1" value="5.420853693665244" />
+      <entry key="W1" value="6.743834364426168" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="7.400959975334306E-4" />
-      <entry key="MS500" value="0.24436290577465308" />
-      <entry key="S2" value="1.1539364042621432" />
-      <entry key="S5" value="1.9634308119723687" />
-      <entry key="S10" value="2.4098602169650483" />
-      <entry key="S30" value="2.7844064909307615" />
-      <entry key="S60" value="2.889638076542879" />
-      <entry key="M2" value="2.948181508647114" />
-      <entry key="M5" value="3.195303285728701" />
-      <entry key="M10" value="4.255873117321294" />
-      <entry key="M15" value="6.376549605966924" />
-      <entry key="M30" value="14.740119273128618" />
-      <entry key="H1" value="26.416793129181027" />
-      <entry key="H2" value="36.4349112056979" />
-      <entry key="H4" value="43.03657372607428" />
-      <entry key="D1" value="49.56679837513027" />
-      <entry key="W1" value="50.79249887306021" />
+      <entry key="MS100" value="2.716160193628449E-6" />
+      <entry key="MS500" value="0.0770532703414879" />
+      <entry key="S2" value="0.5268630831697736" />
+      <entry key="S5" value="0.773889773238062" />
+      <entry key="S10" value="0.8797100506633205" />
+      <entry key="S30" value="0.9581787121989447" />
+      <entry key="S60" value="0.978866033836574" />
+      <entry key="M2" value="0.9893765884821482" />
+      <entry key="M5" value="0.9957370153030545" />
+      <entry key="M10" value="0.9978662311668107" />
+      <entry key="M15" value="0.998576981169517" />
+      <entry key="M30" value="0.9993377931307569" />
+      <entry key="H1" value="1.0484876438491866" />
+      <entry key="H2" value="2.649909961615655" />
+      <entry key="H4" value="10.739649168998845" />
+      <entry key="D1" value="44.056075481655725" />
+      <entry key="W1" value="56.58241660508585" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -137,6 +130,7 @@
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/HP/PycharmProjects/my_portfolio/portfolio/static/portfolio/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -146,6 +140,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\PycharmProjects\my_portfolio\portfolio\static\portfolio\images" />
+    </key>
+  </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/my_portfolio/templates/portfolio/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -196,11 +195,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1791918395862</updated>
-      <workItem from="1791918397625" duration="3691000" />
+      <workItem from="1791918397625" duration="6819000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1791923220238</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1791923220238</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added Host">
+      <option name="closed" value="true" />
+      <created>1791924632661</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1791924632661</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Added Host" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Host" />
   </component>
 </project>
