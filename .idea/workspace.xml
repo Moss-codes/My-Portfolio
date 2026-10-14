@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d5ca295-8129-4841-a8e7-038bc8f282b6" name="Changes" comment="Improved Logo and Homepage">
+    <list default="true" id="6d5ca295-8129-4841-a8e7-038bc8f282b6" name="Changes" comment="Improved Logo and Homepage 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/portfolio/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio/partials/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio/partials/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +203,7 @@
       <updated>1791918395862</updated>
       <workItem from="1791918397625" duration="6819000" />
       <workItem from="1791957095137" duration="1703000" />
-      <workItem from="1791965138539" duration="11000000" />
+      <workItem from="1791965138539" duration="11805000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -261,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791989966668</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Improved Logo and Homepage 2">
+      <option name="closed" value="true" />
+      <created>1791990711803</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1791990711803</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +295,7 @@
     <MESSAGE value="Modified Profile picture" />
     <MESSAGE value="Added Full Name to index" />
     <MESSAGE value="Improved Logo and Homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved Logo and Homepage" />
+    <MESSAGE value="Improved Logo and Homepage 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved Logo and Homepage 2" />
   </component>
 </project>
