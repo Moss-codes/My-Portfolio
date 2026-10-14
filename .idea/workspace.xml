@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d5ca295-8129-4841-a8e7-038bc8f282b6" name="Changes" comment="Changed nav icon to From SE to my Portfolio">
-      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/comp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/seminar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/static/portfolio/images/talentshow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/portfolio/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/portfolio/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/portfolio/partials/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/portfolio/partials/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/portfolio/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_portfolio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio/index.html" afterDir="false" />
+    <list default="true" id="6d5ca295-8129-4841-a8e7-038bc8f282b6" name="Changes" comment="Improved Version&#10;Added New contact.html ,  about.html">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/portfolio/partials/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio/partials/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,61 +47,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0000000012064372" />
-      <entry key="S30" value="1.0010645553417257" />
-      <entry key="S60" value="1.0326276907955962" />
-      <entry key="M2" value="1.181207663121898" />
-      <entry key="M5" value="1.5810614751363545" />
-      <entry key="M10" value="2.1020357357664246" />
-      <entry key="M15" value="2.4834138289511296" />
-      <entry key="M30" value="4.241246776250405" />
-      <entry key="H1" value="14.987320152240033" />
-      <entry key="H2" value="40.029179703882505" />
-      <entry key="H4" value="71.32305647963214" />
-      <entry key="D1" value="140.52454936932153" />
-      <entry key="W1" value="165.17024511676522" />
+      <entry key="MS100" value="7.833410019304832E-5" />
+      <entry key="MS500" value="0.15093655034063977" />
+      <entry key="S2" value="0.6889392215302252" />
+      <entry key="S5" value="1.7365385766502413" />
+      <entry key="S10" value="3.6318337790282373" />
+      <entry key="S30" value="7.333380087716165" />
+      <entry key="S60" value="9.126255356781625" />
+      <entry key="M2" value="10.42889505972793" />
+      <entry key="M5" value="11.69498343507171" />
+      <entry key="M10" value="12.564298658604482" />
+      <entry key="M15" value="13.08138479661163" />
+      <entry key="M30" value="14.947682453460725" />
+      <entry key="H1" value="25.563407752816726" />
+      <entry key="H2" value="50.49269036502695" />
+      <entry key="H4" value="81.85132629777151" />
+      <entry key="D1" value="151.37083135144866" />
+      <entry key="W1" value="176.14446344871433" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="2.791836071363887E-150" />
-      <entry key="S2" value="4.0876384772156115E-38" />
-      <entry key="S5" value="1.1081256084736201E-15" />
-      <entry key="S10" value="3.328852067186334E-8" />
-      <entry key="S30" value="0.0032194745897703297" />
-      <entry key="S60" value="0.060605122051659105" />
-      <entry key="M2" value="0.39070368396015376" />
-      <entry key="M5" value="2.0199501085130387" />
-      <entry key="M10" value="4.0232563355062485" />
-      <entry key="M15" value="5.182339458925659" />
-      <entry key="M30" value="6.839386219524792" />
-      <entry key="H1" value="8.392411863128917" />
-      <entry key="H2" value="10.246146708534097" />
-      <entry key="H4" value="12.358780258493912" />
-      <entry key="D1" value="18.14876140531632" />
-      <entry key="W1" value="20.522620351058336" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000799800661535" />
+      <entry key="S2" value="1.094568269015972" />
+      <entry key="S5" value="1.389312345530831" />
+      <entry key="S10" value="1.623948992734523" />
+      <entry key="S30" value="1.8546508555811356" />
+      <entry key="S60" value="1.9371423679574418" />
+      <entry key="M2" value="2.140632002732116" />
+      <entry key="M5" value="3.4632165168783837" />
+      <entry key="M10" value="5.434594623910513" />
+      <entry key="M15" value="6.665491676946221" />
+      <entry key="M30" value="8.490392880594664" />
+      <entry key="H1" value="10.175827317561238" />
+      <entry key="H2" value="12.113225281855017" />
+      <entry key="H4" value="14.278424491836924" />
+      <entry key="D1" value="20.129066955641264" />
+      <entry key="W1" value="22.51943840072603" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7526233737055336" />
-      <entry key="MS500" value="0.9447470409972061" />
-      <entry key="S2" value="0.9858909615070789" />
-      <entry key="S5" value="0.9943323153899843" />
-      <entry key="S10" value="0.9971621637273832" />
-      <entry key="S30" value="1.0032788016374032" />
-      <entry key="S60" value="1.0921722955622053" />
-      <entry key="M2" value="1.5694332546373886" />
-      <entry key="M5" value="3.595431922131156" />
-      <entry key="M10" value="6.119323820308399" />
-      <entry key="M15" value="7.660461540153251" />
-      <entry key="M30" value="11.077011431281486" />
-      <entry key="H1" value="23.377440266954697" />
-      <entry key="H2" value="50.2738308157316" />
-      <entry key="H4" value="83.68082961843673" />
-      <entry key="D1" value="158.67299613990951" />
-      <entry key="W1" value="185.69281150367664" />
+      <entry key="MS100" value="0.005872516866940298" />
+      <entry key="MS500" value="0.5060688721092468" />
+      <entry key="S2" value="1.500065577315126" />
+      <entry key="S5" value="2.907964625162551" />
+      <entry key="S10" value="5.09648171855828" />
+      <entry key="S30" value="9.115632669770335" />
+      <entry key="S60" value="11.023788158622677" />
+      <entry key="M2" value="12.547817268596008" />
+      <entry key="M5" value="15.145663618631687" />
+      <entry key="M10" value="17.98952297689308" />
+      <entry key="M15" value="19.739256184656572" />
+      <entry key="M30" value="23.433207427483243" />
+      <entry key="H1" value="35.73628615953594" />
+      <entry key="H2" value="62.60408111417829" />
+      <entry key="H4" value="96.12857100304298" />
+      <entry key="D1" value="171.49955413878573" />
+      <entry key="W1" value="198.66384362568826" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -137,6 +125,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "django.template.preview.state": "SHOW_EDITOR",
@@ -213,7 +202,7 @@
       <updated>1791918395862</updated>
       <workItem from="1791918397625" duration="6819000" />
       <workItem from="1791957095137" duration="1703000" />
-      <workItem from="1791965138539" duration="4013000" />
+      <workItem from="1791965138539" duration="4450000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -231,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791924632661</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Improved Version&#10;Added New contact.html ,  about.html">
+      <option name="closed" value="true" />
+      <created>1791978832595</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1791978832595</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +249,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Added Host" />
     <MESSAGE value="Changed nav icon to From SE to my Portfolio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed nav icon to From SE to my Portfolio" />
+    <MESSAGE value="Improved Version&#10;Added New contact.html ,  about.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved Version&#10;Added New contact.html ,  about.html" />
   </component>
 </project>
