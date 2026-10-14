@@ -1,6 +1,11 @@
+{% load static %}
+
 <nav>
     <div class="nav-container">
-        <div class="logo">My Portfolio</div>
+        <a href="#" class="logo">
+          <img src="{% static 'portfolio/images/logo.svg' %}" alt="Logo Icon" class="logo-icon" />
+          <span class="logo-text">Moss<span class="accent">Codes</span></span>
+        </a>
         <ul class="nav-links">
             <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'projects' %}">Projects</a></li>
