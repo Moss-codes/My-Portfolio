@@ -20,6 +20,7 @@ from portfolio import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',views.home,name='home'),
+    path('', views.home, name='home'),
+    path('projects/', views.projects, name='projects'),
+    path('about/', views.about, name='about'),
 ]

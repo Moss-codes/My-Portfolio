@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio | Software Engineer{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0b0b0b; color: #d1d5db; line-height: 1.5; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Navigation Styles */
+        nav { position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(11, 11, 11, 0.85); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { background-color: #ffffff; color: #0b0b0b; font-weight: 800; padding: 0.5rem 0.8rem; border-radius: 50%; font-size: 0.9rem; }
+        .nav-links { display: flex; list-style: none; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 0.4rem 1.5rem; border-radius: 50px; gap: 2rem; font-size: 0.85rem; }
+        .nav-links a:hover { color: #ffffff; }
+        .talk-btn { background-color: #ffffff; color: #0b0b0b; padding: 0.5rem 1.2rem; border-radius: 50px; font-weight: 600; font-size: 0.85rem; transition: opacity 0.2s; }
+        .talk-btn:hover { opacity: 0.9; }
+
+        /* Section & Cards */
+        section { max-width: 1200px; margin: 0 auto; padding: 8rem 2rem 5rem; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header h2 { font-size: 2.2rem; color: #ffffff; font-weight: 700; margin-bottom: 0.5rem; }
+        .section-header p { color: #9ca3af; font-size: 0.9rem; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+        .card { background-color: #121212; border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+        .card h3 { color: #ffffff; font-size: 1.1rem; margin-bottom: 0.75rem; }
+        .card p { color: #9ca3af; font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .pill-group { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .pill { background-color: #1a1a1a; border: 1px solid rgba(255, 255, 255, 0.05); color: #d1d5db; font-size: 0.75rem; padding: 0.3rem 0.8rem; border-radius: 6px; }
+
+        /* Footer Styles */
+        .contact-footer { background-color: #0d0d0d; border-top: 1px solid rgba(255, 255, 255, 0.06); padding: 5rem 2rem 2rem; }
+        .contact-container { max-width: 650px; margin: 0 auto; }
+        .contact-form { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2rem; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 0.9rem 1rem; background-color: #121212; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; color: #ffffff; font-family: inherit; font-size: 0.9rem; outline: none; }
+        .submit-btn { background-color: #ffffff; color: #0b0b0b; font-weight: 600; padding: 0.9rem; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; }
+        .footer-bottom { max-width: 1200px; margin: 3rem auto 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.04); padding-top: 2rem; color: #6b7280; font-size: 0.8rem; }
+
+        @media (max-width: 900px) { .nav-links { display: none; } .form-row { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <!-- Include Navbar Partial -->
+    {% include 'portfolio/partials/navbar.html' %}
+
+    <!-- Page Content -->
+    {% block content %}{% endblock %}
+
+    <!-- Include Footer Partial -->
+    {% include 'portfolio/partials/footer.html' %}
+
+</body>
+</html>
