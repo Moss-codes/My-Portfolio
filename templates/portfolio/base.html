@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Mossa Ndayambaje | Software Engineer{% endblock %}</title>
 
+    <!-- Example: Plausible Analytics -->
+    <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script>
+
     <!-- Site Icon / Favicon -->
     <link rel="icon" type="image/svg+xml" href="{% static 'portfolio/images/logo.svg' %}">
     <link rel="shortcut icon" href="{% static 'portfolio/images/logo.svg' %}">
@@ -178,7 +181,21 @@
             opacity: 1;
             transform: translateY(0) scale(1);
         }
+
     </style>
+
+    <!-- Example Google Analytics 4 snippet -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOURMEASUREMENTID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-YOURMEASUREMENTID');
+    </script>
 </head>
 <body>
 
