@@ -4,103 +4,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Portfolio | Software Engineer{% endblock %}</title>
+    <title>{% block title %}Mossa Ndayambaje | Software Engineer{% endblock %}</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+
     <style>
+        :root {
+            --font-display: "Anton", sans-serif;
+            --font-sans: "Onest", sans-serif;
+            --background: #08080a;
+            --foreground: #f3f1ea;
+            --surface: #111114;
+            --surface-2: #17171b;
+            --muted: #9ca3af;
+            --line: rgba(243, 241, 234, 0.1);
+            --line-strong: rgba(243, 241, 234, 0.22);
+            --accent: #ff3b1d;
+            --gutter: 2.5rem;
+            --section: 8rem;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0b0b0b; color: #d1d5db; line-height: 1.5; overflow-x: hidden; }
+
+        html { font-size: 16px; background: var(--background); }
+        html.lenis, html.lenis body { height: auto; }
+
+        @media (max-width:1920px){ html { font-size:0.833333vw; } }
+        @media (max-width:1440px){ html { font-size:1.111111vw; } }
+        @media (max-width:1024px){ html { font-size:1.5625vw; } }
+        @media (max-width:640px){ html { font-size:4.444444vw; :root { --gutter:16px; } } }
+
+        body {
+            background: var(--background);
+            color: var(--foreground);
+            font-family: var(--font-sans);
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            overflow-x: hidden;
+        }
+
+        ::selection { background: var(--accent); color: var(--background); }
         a { text-decoration: none; color: inherit; }
 
-        /* Global Entrance Animations */
-        @keyframes slideUpFade {
-            0% {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Preloader Overlay */
+        #preloader {
+            position: fixed; inset: 0; z-index: 200;
+            background: var(--background);
+            display: flex; flex-direction: column; justify-content: space-between;
+            padding: var(--gutter);
+            transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
         }
 
-        .animate-entrance {
-            animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        /* Center Spinning Image Logo */
+        .preloader-center-logo {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
 
-        .delay-1 { animation-delay: 0.1s; opacity: 0; }
-        .delay-2 { animation-delay: 0.25s; opacity: 0; }
-        .delay-3 { animation-delay: 0.4s; opacity: 0; }
-
-        /* Navigation Styles */
-        nav { position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(11, 11, 11, 0.85); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo {
-          font-family: 'Syne', sans-serif;
-          font-weight: 900;
-          font-size: 1.35rem;
-          color: #ffffff;
-          text-decoration: none;
-          letter-spacing: -0.04em;
-          display: inline-flex;
-          align-items: center;
-          transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        .preloader-svg-logo {
+            width: 5.5rem;
+            height: 5.5rem;
+            object-fit: contain;
+            animation: spinLogo 12s linear infinite;
         }
 
-        .logo-icon {
-          width: 60px;
-          height: 60px;
-          object-fit: contain;
+        @keyframes spinLogo {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
-        .logo:hover {
-          transform: translateY(-1px) scale(1.03);
+        .preloader-brand {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            line-height: 1;
+            letter-spacing: -0.01em;
+            color: var(--foreground);
         }
 
-        .logo-accent {
-          color: #38bdf8;
-          margin-left: 0.25rem;
+        .preloader-counter {
+            font-family: var(--font-display);
+            font-size: 7.5rem;
+            line-height: 1;
+            font-variant-numeric: tabular-nums;
+            color: var(--foreground);
+            align-self: flex-end;
         }
-        .nav-links { display: flex; list-style: none; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 0.4rem 1.5rem; border-radius: 50px; gap: 2rem; font-size: 0.85rem; }
-        .nav-links a:hover { color: #ffffff; }
-        .talk-btn { background-color: #ffffff; color: #0b0b0b; padding: 0.5rem 1.2rem; border-radius: 50px; font-weight: 600; font-size: 0.85rem; transition: opacity 0.2s; }
-        .talk-btn:hover { opacity: 0.9; }
+        .preloader-counter span { color: var(--accent); }
 
-        /* Section & Cards */
-        section { max-width: 1200px; margin: 0 auto; padding: 8rem 2rem 5rem; }
-        .section-header { text-align: center; margin-bottom: 3rem; }
-        .section-header h2 { font-size: 2.2rem; color: #ffffff; font-weight: 700; margin-bottom: 0.5rem; }
-        .section-header p { color: #9ca3af; font-size: 0.9rem; }
-        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-        .card { background-color: #121212; border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
-        .card h3 { color: #ffffff; font-size: 1.1rem; margin-bottom: 0.75rem; }
-        .card p { color: #9ca3af; font-size: 0.85rem; margin-bottom: 1.5rem; }
-        .pill-group { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .pill { background-color: #1a1a1a; border: 1px solid rgba(255, 255, 255, 0.05); color: #d1d5db; font-size: 0.75rem; padding: 0.3rem 0.8rem; border-radius: 6px; }
+        /* Solid Fixed Header */
+        header {
+            position: fixed;
+            inset-inline: 0;
+            top: 0;
+            z-index: 100;
+            background-color: #08080a;
+            border-bottom: 1px solid var(--line);
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem var(--gutter);
+        }
 
-        /* Footer Styles */
-        .contact-footer { background-color: #0d0d0d; border-top: 1px solid rgba(255, 255, 255, 0.06); padding: 5rem 2rem 2rem; }
-        .contact-container { max-width: 650px; margin: 0 auto; }
-        .contact-form { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2rem; }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 0.9rem 1rem; background-color: #121212; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; color: #ffffff; font-family: inherit; font-size: 0.9rem; outline: none; }
-        .submit-btn { background-color: #ffffff; color: #0b0b0b; font-weight: 600; padding: 0.9rem; border: none; border-radius: 8px; cursor: pointer; font-size: 0.95rem; }
-        .footer-bottom { max-width: 1200px; margin: 3rem auto 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.04); padding-top: 2rem; color: #6b7280; font-size: 0.8rem; }
+        /* Nav Logo Image Styling */
+        .logo-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.7rem;
+            height: 2.7rem;
+            border-radius: 9999px;
+            border: 1px solid var(--line-strong);
+            overflow: hidden;
+            padding: 0.25rem;
+            background: var(--surface);
+        }
+        .logo-badge img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
-        @media (max-width: 900px) { .nav-links { display: none; } .form-row { grid-template-columns: 1fr; } }
+        .logo-name {
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 0.10em;
+            color: var(--foreground);
+            margin-left: 0.75rem;
+        }
+        @media (max-width: 639px) { .logo-name { display: none; } }
+
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        @media (max-width: 767px) { .nav-links { display: none; } }
+
+        .nav-link {
+            position: relative;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--muted);
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover { color: var(--foreground); }
+
+        /* Eyebrow Label */
+        .eyebrow { display: flex; align-items: center; gap: 0.75rem; font-size: 0.8125rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.22em; color: var(--muted); }
+        .eyebrow-dot { width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: var(--accent); }
+
+        /* Smooth Scroll & Reveal Motion Classes */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(50px) scale(0.98);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        .in-view .reveal-up, .in-view.reveal-up {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
     </style>
 </head>
 <body>
 
-    <!-- Include Navbar Partial -->
-    {% include 'portfolio/partials/navbar.html' %}
+    <!-- Preloader Overlay -->
+    <div id="preloader">
+        <div class="preloader-brand">Mossa Ndayambaje</div>
 
-    <!-- Page Content -->
-    <div class="animate-entrance delay-2">
-        {% block content %}{% endblock %}
+        <!-- Center Spinning Image Logo -->
+        <div class="preloader-center-logo">
+            <img src="{% static 'portfolio/images/logo.svg' %}" class="preloader-svg-logo" alt="Loading Logo">
+        </div>
+
+        <div class="preloader-counter"><span id="preloader-num">0</span><span>%</span></div>
     </div>
 
-    <!-- Include Footer Partial -->
-    {% include 'portfolio/partials/footer.html' %}
+    <!-- Navigation Header -->
+    <header>
+        <nav>
+            <a href="#top" style="display: flex; align-items: center;">
+                <div class="logo-badge">
+                    <img src="{% static 'portfolio/images/logo.svg' %}" alt="MN Logo">
+                </div>
+                <span class="logo-name">MossCodes</span>
+            </a>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="#story">Story</a></li>
+                <li><a class="nav-link" href="#languages">Stack</a></li>
+                <li><a class="nav-link" href="#ventures">Projects</a></li>
+                <li><a class="nav-link" href="#impact">Impact</a></li>
+                <li><a class="nav-link" href="#voices">Gallery</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main style="position: relative; width: 100%; overflow-x: hidden;">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Lenis Smooth Scroll Script -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script>
+        // Initialize Lenis Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+            touchMultiplier: 1.5,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Extended Preloader Animation
+        const preloader = document.getElementById("preloader");
+        const numEl = document.getElementById("preloader-num");
+        let count = 0;
+
+        const interval = setInterval(() => {
+            count += 1; // Smooth count 0 to 100 (~2.5s)
+            if (count > 100) count = 100;
+            if (numEl) numEl.textContent = count;
+
+            if (count === 100) {
+                clearInterval(interval);
+                setTimeout(dismissPreloader, 300);
+            }
+        }, 25);
+
+        function dismissPreloader() {
+            if (preloader) {
+                preloader.style.transform = "translateY(-100%)";
+                document.body.classList.add("hero-active");
+            }
+        }
+
+        // Safety fallback: Dismiss after 3.5s maximum
+        setTimeout(dismissPreloader, 3500);
+
+        // Intersection Observer for Section Reveal Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("in-view");
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section, .reveal-up').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
