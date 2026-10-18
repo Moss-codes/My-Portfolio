@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d5ca295-8129-4841-a8e7-038bc8f282b6" name="Changes" comment="Gmail link work">
-      <change afterPath="$PROJECT_DIR$/templates/portfolio/projects.html" afterDir="false" />
+    <list default="true" id="6d5ca295-8129-4841-a8e7-038bc8f282b6" name="Changes" comment="Gmail link work. css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/portfolio/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +19,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="34" />
+    <option name="cachedIndexableFilesCount" value="37" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,61 +49,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.3950614289724612" />
-      <entry key="MS500" value="4.242047309034087" />
-      <entry key="S2" value="9.989199157057634" />
-      <entry key="S5" value="14.763327568416281" />
-      <entry key="S10" value="17.42871110912621" />
-      <entry key="S30" value="19.692057938168485" />
-      <entry key="S60" value="20.48602190498237" />
-      <entry key="M2" value="21.83343647271202" />
-      <entry key="M5" value="25.899001993729225" />
-      <entry key="M10" value="31.363127430141787" />
-      <entry key="M15" value="35.576398280282426" />
-      <entry key="M30" value="46.85139211003441" />
-      <entry key="H1" value="72.11524262915877" />
-      <entry key="H2" value="119.97929000790329" />
-      <entry key="H4" value="189.49045459235515" />
-      <entry key="D1" value="366.4633819948709" />
-      <entry key="W1" value="433.5724047640511" />
+      <entry key="MS100" value="1.0000000000032336" />
+      <entry key="MS500" value="1.0050342759003321" />
+      <entry key="S2" value="1.2663693514354253" />
+      <entry key="S5" value="1.5891063462995199" />
+      <entry key="S10" value="1.7675326353319007" />
+      <entry key="S30" value="1.91581099170857" />
+      <entry key="S60" value="2.053660589646967" />
+      <entry key="M2" value="4.090071520622118" />
+      <entry key="M5" value="20.16057158499786" />
+      <entry key="M10" value="48.319341437639864" />
+      <entry key="M15" value="68.58857331657613" />
+      <entry key="M30" value="104.2175775557713" />
+      <entry key="H1" value="145.30308022839418" />
+      <entry key="H2" value="202.68566882638214" />
+      <entry key="H4" value="278.8974622802046" />
+      <entry key="D1" value="467.00299786042893" />
+      <entry key="W1" value="537.834643595257" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="8.453350437949955E-208" />
-      <entry key="S10" value="4.01586405607914E-104" />
-      <entry key="S30" value="5.406269793100354E-35" />
-      <entry key="S60" value="1.039300131188812E-17" />
-      <entry key="M2" value="4.630254649187031E-9" />
-      <entry key="M5" value="8.864629043079422E-4" />
-      <entry key="M10" value="0.07258642954561462" />
-      <entry key="M15" value="0.3700651374415498" />
-      <entry key="M30" value="2.191844309504522" />
-      <entry key="H1" value="5.83348068021419" />
-      <entry key="H2" value="10.619431051620847" />
-      <entry key="H4" value="16.696634488477905" />
-      <entry key="D1" value="32.43725375212691" />
-      <entry key="W1" value="38.722396483977505" />
+      <entry key="S5" value="1.8198991055827343E-284" />
+      <entry key="S10" value="1.863323331194366E-142" />
+      <entry key="S30" value="9.017111803501092E-48" />
+      <entry key="S60" value="4.24449329596911E-24" />
+      <entry key="M2" value="2.959015985865153E-12" />
+      <entry key="M5" value="4.6760327092448246E-5" />
+      <entry key="M10" value="0.016671087133325987" />
+      <entry key="M15" value="0.13878754648895308" />
+      <entry key="M30" value="1.3422884849905965" />
+      <entry key="H1" value="4.565053220797826" />
+      <entry key="H2" value="9.394210559362609" />
+      <entry key="H4" value="15.70393396100213" />
+      <entry key="D1" value="32.10756213164541" />
+      <entry key="W1" value="38.665925204054766" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.3287388120151278" />
-      <entry key="MS500" value="4.19629259683111" />
-      <entry key="S2" value="9.954352216247027" />
-      <entry key="S5" value="14.739334149818752" />
-      <entry key="S10" value="17.4136970196887" />
-      <entry key="S30" value="19.68617482768927" />
-      <entry key="S60" value="20.482940733752667" />
-      <entry key="M2" value="21.831816520510962" />
-      <entry key="M5" value="25.899130061284236" />
-      <entry key="M10" value="31.434982301876353" />
-      <entry key="M15" value="35.945332307712015" />
-      <entry key="M30" value="49.040862237483104" />
-      <entry key="H1" value="77.9453055549039" />
-      <entry key="H2" value="130.5949978792162" />
-      <entry key="H4" value="206.1838778284823" />
-      <entry key="D1" value="398.89959407628226" />
-      <entry key="W1" value="472.29462592041466" />
+      <entry key="MS100" value="0.0012533456030923262" />
+      <entry key="MS500" value="0.26408180921604085" />
+      <entry key="S2" value="0.9054489414143716" />
+      <entry key="S5" value="1.3889629575587814" />
+      <entry key="S10" value="1.6523417478820144" />
+      <entry key="S30" value="1.8732234274315063" />
+      <entry key="S60" value="2.0317600132440226" />
+      <entry key="M2" value="4.078779810439502" />
+      <entry key="M5" value="20.155538894863845" />
+      <entry key="M10" value="48.33297533236736" />
+      <entry key="M15" value="68.72488087574982" />
+      <entry key="M30" value="105.55728287768494" />
+      <entry key="H1" value="149.86486116406664" />
+      <entry key="H2" value="212.07627743714363" />
+      <entry key="H4" value="294.59821920473547" />
+      <entry key="D1" value="499.10950242178257" />
+      <entry key="W1" value="576.5003899342756" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -205,7 +206,9 @@
       <workItem from="1791957095137" duration="1703000" />
       <workItem from="1791965138539" duration="14049000" />
       <workItem from="1792065748252" duration="1740000" />
-      <workItem from="1792272384824" duration="8133000" />
+      <workItem from="1792272384824" duration="8299000" />
+      <workItem from="1792317275051" duration="541000" />
+      <workItem from="1792319835262" duration="3824000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -311,7 +314,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792281058715</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Gmail link work. css">
+      <option name="closed" value="true" />
+      <created>1792281490276</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1792281490276</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,6 +354,7 @@
     <MESSAGE value="added Site-icon" />
     <MESSAGE value="added viewing counting system" />
     <MESSAGE value="Gmail link work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gmail link work" />
+    <MESSAGE value="Gmail link work. css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gmail link work. css" />
   </component>
 </project>

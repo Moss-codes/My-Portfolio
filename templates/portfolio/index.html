@@ -4,6 +4,45 @@
 {% block title %}Mossa Ndayambaje | Software Engineer{% endblock %}
 
 {% block content %}
+<style>
+    /* Responsive Mobile Overrides */
+    @media (max-width: 900px) {
+        .hero-portrait-container {
+            width: 80vw !important;
+            height: 55vh !important;
+            bottom: 0 !important;
+        }
+        .hero-title-giant {
+            font-size: 22vw !important;
+            bottom: 0 !important;
+        }
+        .section-heading {
+            font-size: 2.75rem !important;
+        }
+        .hero-content-wrapper {
+            padding-top: 1rem !important;
+        }
+        .footer-main-row {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+        }
+        .footer-profile-container {
+            width: 100% !important;
+            justify-content: center !important;
+            margin-top: 2rem;
+        }
+        .footer-profile-pic {
+            width: 14rem !important;
+            height: 14rem !important;
+        }
+        .footer-email-link {
+            font-size: 1.25rem !important; /* Scaled down to fit across 1 single line on mobile */
+            gap: 0.5rem !important;
+            margin-top: 1.5rem !important;
+        }
+    }
+</style>
+
 <!-- SVG Liquid Filter -->
 <svg style="width:0;height:0;position:absolute;">
     <filter id="liquidFilter">
@@ -13,15 +52,15 @@
 </svg>
 
 <!-- Hero Section -->
-<section id="top" style="position: relative; display: flex; flex-direction: column; min-height: 100vh; overflow: hidden; padding-top: 7rem;">
-    <div style="padding: 0 var(--gutter); display: flex; flex-direction: column; gap: 2rem; z-index: 30;" class="reveal-up">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+<section id="top" style="position: relative; display: flex; flex-direction: column; min-height: 100vh; overflow: hidden; padding-top: 6rem;">
+    <div class="hero-content-wrapper" style="padding: 0 var(--gutter); display: flex; flex-direction: column; gap: 1.5rem; z-index: 30;" class="reveal-up">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.5rem;">
             <div>
-                <h2 style="font-family: var(--font-display); text-transform: uppercase; line-height: 1.05; font-size: 3.25rem; color: var(--foreground);">
+                <h2 style="font-family: var(--font-display); text-transform: uppercase; line-height: 1.05; font-size: 2.25rem; color: var(--foreground);">
                     Software Engineer<br>Math &amp; Physics<br>Computer Science<br>Backend Specialist
                 </h2>
             </div>
-            <p style="max-width: 26rem; font-size: 1.0625rem; color: var(--muted); text-align: right;">
+            <p style="max-width: 26rem; font-size: 0.95rem; color: var(--muted); text-align: left;">
                 Hello, I'm Mossa Ndayambaje. I build systems that bridge theoretical physics and mathematics with scalable web infrastructure.
             </p>
         </div>
@@ -29,7 +68,7 @@
 
     <!-- Giant Name Behind Portrait -->
     <div style="position: absolute; inset-inline: 0; bottom: 0; z-index: 10; display: flex; flex-direction: column; align-items: center; pointer-events: none;">
-        <h1 style="font-family: var(--font-display); text-transform: uppercase; line-height: 0.78; letter-spacing: -0.01em; color: var(--accent); font-size: 18rem; text-align: center; white-space: nowrap;">
+        <h1 class="hero-title-giant" style="font-family: var(--font-display); text-transform: uppercase; line-height: 0.78; letter-spacing: -0.01em; color: var(--accent); font-size: 16rem; text-align: center; white-space: nowrap;">
             <span style="display: block;">
                 <span class="letter-reveal" style="transition-delay: 0.1s;">M</span><span class="letter-reveal" style="transition-delay: 0.15s;">O</span><span class="letter-reveal" style="transition-delay: 0.2s;">S</span><span class="letter-reveal" style="transition-delay: 0.25s;">S</span><span class="letter-reveal" style="transition-delay: 0.3s;">A</span>
             </span>
@@ -39,68 +78,68 @@
         </h1>
     </div>
 
-    <!-- Hero Portrait Overlay -->
-    <div id="heroPortrait"
-         style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); height: 78vh; width: 38vw; z-index: 20; pointer-events: auto; cursor: pointer; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+    <!-- Restored Hero Portrait Overlay -->
+    <div id="heroPortrait" class="hero-portrait-container"
+         style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); height: 72vh; width: 38vw; z-index: 20; pointer-events: auto; cursor: pointer; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
         <img id="heroImage" src="{% static 'portfolio/images/pauseV2.png' %}" alt="Mossa Ndayambaje"
              style="width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease; filter: brightness(1.05) contrast(1.05);">
     </div>
 
     <div style="position: absolute; inset-inline: 0; bottom: 0; z-index: 20; height: 26vh; background: linear-gradient(to bottom, transparent, #08080a); pointer-events: none;"></div>
 
-    <div style="position: absolute; bottom: 2rem; left: var(--gutter); z-index: 30;" class="eyebrow">
-        <div style="width: 1px; height: 2.5rem; background: var(--accent);"></div>
+    <div style="position: absolute; bottom: 1.5rem; left: var(--gutter); z-index: 30;" class="eyebrow">
+        <div style="width: 1px; height: 2rem; background: var(--accent);"></div>
         <span>Scroll to enter</span>
     </div>
 </section>
 
 <!-- Infinite Marquee -->
-<section aria-label="Operating principles" style="overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2rem 0; margin-top: 2rem;">
+<section aria-label="Operating principles" style="overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1.5rem 0; margin-top: 2rem;">
     <div style="display: flex; width: max-content; animation: marquee 22s linear infinite;">
         <style>
             @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
         </style>
-        <div style="display: flex; align-items: center; font-family: var(--font-display); font-size: 3.25rem; text-transform: uppercase;">
-            <span>Build Bold</span><div style="margin: 0 2rem; width: 0.625rem; height: 0.625rem; border-radius: 9999px; background: var(--accent);"></div>
-            <span>Scale Relentlessly</span><div style="margin: 0 2rem; width: 0.625rem; height: 0.625rem; border-radius: 9999px; background: var(--accent);"></div>
-            <span>Think In Decades</span><div style="margin: 0 2rem; width: 0.625rem; height: 0.625rem; border-radius: 9999px; background: var(--accent);"></div>
-            <span>Ship The Future</span><div style="margin: 0 2rem; width: 0.625rem; height: 0.625rem; border-radius: 9999px; background: var(--accent);"></div>
+        <div style="display: flex; align-items: center; font-family: var(--font-display); font-size: 2.5rem; text-transform: uppercase;">
+            <span>Build Bold</span><div style="margin: 0 1.5rem; width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: var(--accent);"></div>
+            <span>Scale Relentlessly</span><div style="margin: 0 1.5rem; width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: var(--accent);"></div>
+            <span>Think In Decades</span><div style="margin: 0 1.5rem; width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: var(--accent);"></div>
+            <span>Ship The Future</span><div style="margin: 0 1.5rem; width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: var(--accent);"></div>
         </div>
-        <div style="display: flex; align-items: center; font-family: var(--font-display); font-size: 3.25rem; text-transform: uppercase;">
-            <span>Build Bold</span><div style="margin: 0 2rem; width: 0.625rem; height: 0.625rem; border-radius: 9999px; background: var(--accent);"></div>
-            <span>Scale Relentlessly</span><div style="margin: 0 2rem; width: 0.625rem; height: 0.625rem; border-radius: 9999px; background: var(--accent);"></div>
-            <span>Think In Decades</span><div style="margin: 0 2rem; width: 0.625rem; height: 0.625rem; border-radius: 9999px; background: var(--accent);"></div>
-            <span>Ship The Future</span><div style="margin: 0 2rem; width: 0.625rem; height: 0.625rem; border-radius: 9999px; background: var(--accent);"></div>
+        <div style="display: flex; align-items: center; font-family: var(--font-display); font-size: 2.5rem; text-transform: uppercase;">
+            <span>Build Bold</span><div style="margin: 0 1.5rem; width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: var(--accent);"></div>
+            <span>Scale Relentlessly</span><div style="margin: 0 1.5rem; width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: var(--accent);"></div>
+            <span>Think In Decades</span><div style="margin: 0 1.5rem; width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: var(--accent);"></div>
+            <span>Ship The Future</span><div style="margin: 0 1.5rem; width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: var(--accent);"></div>
         </div>
     </div>
 </section>
 
 <!-- Story Section -->
 <section id="story" style="padding: var(--section) var(--gutter);">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--gutter);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--gutter);">
         <div class="reveal-up">
             <div class="eyebrow"><div class="eyebrow-dot"></div><span>The Story</span></div>
-            <h2 style="font-family: var(--font-display); font-size: 5rem; text-transform: uppercase; line-height: 0.95; margin-top: 1.5rem;">
+            <h2 class="section-heading" style="font-family: var(--font-display); font-size: 5rem; text-transform: uppercase; line-height: 0.95; margin-top: 1.5rem;">
                 Conviction is a competitive advantage.
             </h2>
-            <p style="font-size: 1.375rem; color: var(--muted); margin-top: 2rem; max-width: 46ch;">
+            <p style="font-size: 1.125rem; color: var(--muted); margin-top: 1.5rem; max-width: 46ch;">
                 I analyze complex backend challenges from first principles in mathematics and computer science. From hardware sensors to distributed web backend architecture, the through-line never changes: build for durability and out-stubborn the doubt.
             </p>
         </div>
         <div>
             <ul style="list-style: none;">
-                <li style="border-top: 1px solid var(--line); padding: 2rem 0; display: grid; grid-template-columns: auto 1fr; column-gap: 1.5rem;" class="reveal-up">
-                    <span style="font-size: 1.75rem; font-weight: 600; color: var(--accent);">01</span>
+                <li style="border-top: 1px solid var(--line); padding: 1.5rem 0; display: grid; grid-template-columns: auto 1fr; column-gap: 1rem;" class="reveal-up">
+                    <span style="font-size: 1.5rem; font-weight: 600; color: var(--accent);">01</span>
                     <div>
-                        <h3 style="font-size: 1.75rem; font-weight: 600;">Systems &amp; Logic First</h3>
-                        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 44ch;">Analyzing backend architecture from mathematical principles to optimize runtime speed and structural integrity.</p>
+                        <h3 style="font-size: 1.35rem; font-weight: 600;">Systems &amp; Logic First</h3>
+                        <p style="color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem;">Analyzing backend architecture from mathematical principles to optimize runtime speed and structural integrity.</p>
                     </div>
                 </li>
-                <li style="border-top: 1px solid var(--line); padding: 2rem 0; display: grid; grid-template-columns: auto 1fr; column-gap: 1.5rem;" class="reveal-up">
-                    <span style="font-size: 1.75rem; font-weight: 600; color: var(--accent);">02</span>
+                <li style="border-top: 1px solid var(--line); padding: 1.5rem 0; display: grid; grid-template-columns: auto 1fr; column-gap: 1rem;" class="reveal-up">
+                    <span style="font-size: 1.5rem; font-weight: 600; color: var(--accent);">02</span>
                     <div>
-                        <h3 style="font-size: 1.75rem; font-weight: 600;">Hardware &amp; Software Synergy</h3>
-                        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 44ch;">Connecting web software frameworks like Django with microcontrollers and Arduino hardware logic for automated physical systems.</p>
+                        <h3 style="font-size: 1.35rem; font-weight: 600;">Hardware &amp; Software Synergy</h3>
+                        <p style="color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem;">Connecting web software frameworks like Django with microcontrollers and Arduino hardware logic for automated physical systems.</p>
                     </div>
                 </li>
             </ul>
@@ -112,83 +151,83 @@
 <section id="languages" style="padding: var(--section) var(--gutter); border-top: 1px solid var(--line);">
     <div class="reveal-up">
         <div class="eyebrow"><div class="eyebrow-dot"></div><span>Tech Stack &amp; Languages</span></div>
-        <h2 style="font-family: var(--font-display); font-size: 5rem; text-transform: uppercase; line-height: 0.95; margin-top: 1.5rem;">
+        <h2 class="section-heading" style="font-family: var(--font-display); font-size: 5rem; text-transform: uppercase; line-height: 0.95; margin-top: 1.5rem;">
             Languages &amp; Core Tools.
         </h2>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--gutter); margin-top: 4rem;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--gutter); margin-top: 3rem;">
         <!-- Programming Languages -->
-        <div class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 2.5rem; border-radius: 4px; transition-delay: 0.1s;">
-            <div style="color: var(--accent); font-family: var(--font-display); font-size: 2rem; text-transform: uppercase; margin-bottom: 1rem;">
+        <div class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 2rem; border-radius: 4px; transition-delay: 0.1s;">
+            <div style="color: var(--accent); font-family: var(--font-display); font-size: 1.75rem; text-transform: uppercase; margin-bottom: 1rem;">
                 01 / Languages
             </div>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
-                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1.125rem;">
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem;">
+                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1rem;">
                     <span>Python 3.13</span>
-                    <span style="color: var(--muted); font-size: 0.8125rem; text-transform: uppercase;">Advanced</span>
+                    <span style="color: var(--muted); font-size: 0.75rem; text-transform: uppercase;">Advanced</span>
                 </li>
-                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1.125rem;">
+                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1rem;">
                     <span>C / C++</span>
-                    <span style="color: var(--muted); font-size: 0.8125rem; text-transform: uppercase;">Hardware &amp; Embedded</span>
+                    <span style="color: var(--muted); font-size: 0.75rem; text-transform: uppercase;">Hardware</span>
                 </li>
-                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1.125rem;">
-                    <span>JavaScript (Vanilla ES Modules)</span>
-                    <span style="color: var(--muted); font-size: 0.8125rem; text-transform: uppercase;">Frontend Motion</span>
+                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1rem;">
+                    <span>JavaScript (ESM)</span>
+                    <span style="color: var(--muted); font-size: 0.75rem; text-transform: uppercase;">Motion</span>
                 </li>
-                <li style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; font-size: 1.125rem;">
+                <li style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; font-size: 1rem;">
                     <span>SQL / Relational DBs</span>
-                    <span style="color: var(--muted); font-size: 0.8125rem; text-transform: uppercase;">MariaDB &amp; SQLite</span>
+                    <span style="color: var(--muted); font-size: 0.75rem; text-transform: uppercase;">MariaDB</span>
                 </li>
             </ul>
         </div>
 
         <!-- Frameworks & Core Stack -->
-        <div class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 2.5rem; border-radius: 4px; transition-delay: 0.25s;">
-            <div style="color: var(--accent); font-family: var(--font-display); font-size: 2rem; text-transform: uppercase; margin-bottom: 1rem;">
+        <div class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 2rem; border-radius: 4px; transition-delay: 0.2s;">
+            <div style="color: var(--accent); font-family: var(--font-display); font-size: 1.75rem; text-transform: uppercase; margin-bottom: 1rem;">
                 02 / Frameworks
             </div>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
-                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1.125rem;">
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem;">
+                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1rem;">
                     <span>Django 5.x</span>
-                    <span style="color: var(--muted); font-size: 0.8125rem; text-transform: uppercase;">Backend Core</span>
+                    <span style="color: var(--muted); font-size: 0.75rem; text-transform: uppercase;">Backend</span>
                 </li>
-                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1.125rem;">
-                    <span>HTML5 / CSS Grid (Rem-adaptive)</span>
-                    <span style="color: var(--muted); font-size: 0.8125rem; text-transform: uppercase;">Responsive UI</span>
+                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1rem;">
+                    <span>HTML5 / CSS Grid</span>
+                    <span style="color: var(--muted); font-size: 0.75rem; text-transform: uppercase;">Responsive</span>
                 </li>
-                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1.125rem;">
-                    <span>Arduino / Embedded C++</span>
-                    <span style="color: var(--muted); font-size: 0.8125rem; text-transform: uppercase;">Sensor Systems</span>
+                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1rem;">
+                    <span>Arduino / Embedded</span>
+                    <span style="color: var(--muted); font-size: 0.75rem; text-transform: uppercase;">Sensors</span>
                 </li>
-                <li style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; font-size: 1.125rem;">
-                    <span>Lenis &amp; SVG Filter Animations</span>
-                    <span style="color: var(--muted); font-size: 0.8125rem; text-transform: uppercase;">Smooth Motion</span>
+                <li style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; font-size: 1rem;">
+                    <span>Lenis &amp; SVG Filters</span>
+                    <span style="color: var(--muted); font-size: 0.75rem; text-transform: uppercase;">Motion</span>
                 </li>
             </ul>
         </div>
 
         <!-- Human Languages & Foundations -->
-        <div class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 2.5rem; border-radius: 4px; transition-delay: 0.4s;">
-            <div style="color: var(--accent); font-family: var(--font-display); font-size: 2rem; text-transform: uppercase; margin-bottom: 1rem;">
+        <div class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 2rem; border-radius: 4px; transition-delay: 0.3s;">
+            <div style="color: var(--accent); font-family: var(--font-display); font-size: 1.75rem; text-transform: uppercase; margin-bottom: 1rem;">
                 03 / Spoken &amp; Theory
             </div>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
-                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1.125rem;">
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem;">
+                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1rem;">
                     <span>English</span>
-                    <span style="color: var(--muted); font-size: 0.8125rem; text-transform: uppercase;">Professional</span>
+                    <span style="color: var(--muted); font-size: 0.75rem; text-transform: uppercase;">Professional</span>
                 </li>
-                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1.125rem;">
+                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1rem;">
                     <span>French</span>
-                    <span style="color: var(--muted); font-size: 0.8125rem; text-transform: uppercase;">Fluent</span>
+                    <span style="color: var(--muted); font-size: 0.75rem; text-transform: uppercase;">Fluent</span>
                 </li>
-                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1.125rem;">
+                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 0.5rem; font-size: 1rem;">
                     <span>Mathematics &amp; Physics</span>
-                    <span style="color: var(--muted); font-size: 0.8125rem; text-transform: uppercase;">First Principles</span>
+                    <span style="color: var(--muted); font-size: 0.75rem; text-transform: uppercase;">Principles</span>
                 </li>
-                <li style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; font-size: 1.125rem;">
+                <li style="display: flex; justify-content: space-between; padding-bottom: 0.5rem; font-size: 1rem;">
                     <span>Git / GitHub Workflows</span>
-                    <span style="color: var(--muted); font-size: 0.8125rem; text-transform: uppercase;">Version Control</span>
+                    <span style="color: var(--muted); font-size: 0.75rem; text-transform: uppercase;">VCS</span>
                 </li>
             </ul>
         </div>
@@ -199,30 +238,30 @@
 <section id="ventures" style="padding: var(--section) var(--gutter);">
     <div class="reveal-up">
         <div class="eyebrow"><div class="eyebrow-dot"></div><span>Selected Ventures</span></div>
-        <h2 style="font-family: var(--font-display); font-size: 5rem; text-transform: uppercase; line-height: 0.95; margin-top: 1.5rem;">The work that moves systems.</h2>
+        <h2 class="section-heading" style="font-family: var(--font-display); font-size: 5rem; text-transform: uppercase; line-height: 0.95; margin-top: 1.5rem;">The work that moves systems.</h2>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--gutter); margin-top: 4rem;">
-        <article class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 2rem; border-radius: 4px; transition-delay: 0.1s;">
-            <div style="border-bottom: 1px solid var(--line); padding-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: flex-start;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--gutter); margin-top: 3rem;">
+        <article class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 1.75rem; border-radius: 4px; transition-delay: 0.1s;">
+            <div style="border-bottom: 1px solid var(--line); padding-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
                 <div>
-                    <h3 style="font-size: 1.75rem; font-weight: 600;">Luxury Watch E-Commerce</h3>
-                    <p style="color: var(--muted); margin-top: 0.5rem; font-size: 1.0625rem;">Django 5.x digital storefront designed for high-end timepieces with optimized database models and cart transactions.</p>
+                    <h3 style="font-size: 1.35rem; font-weight: 600;">Luxury Watch E-Commerce</h3>
+                    <p style="color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem;">Django 5.x digital storefront designed for high-end timepieces with optimized database models and cart transactions.</p>
                 </div>
-                <span style="color: var(--accent); font-weight: 600; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.18em;">Completed</span>
+                <span style="color: var(--accent); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.18em;">Completed</span>
             </div>
-            <div style="margin-top: 1rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.22em; color: var(--muted);">Full-Stack Web Development</div>
+            <div style="margin-top: 1rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.22em; color: var(--muted);">Full-Stack Web Development</div>
         </article>
 
-        <article class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 2rem; border-radius: 4px; transition-delay: 0.25s;">
-            <div style="border-bottom: 1px solid var(--line); padding-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: flex-start;">
+        <article class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 1.75rem; border-radius: 4px; transition-delay: 0.2s;">
+            <div style="border-bottom: 1px solid var(--line); padding-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
                 <div>
-                    <h3 style="font-size: 1.75rem; font-weight: 600;">Arduino IR Sensor Automation</h3>
-                    <p style="color: var(--muted); margin-top: 0.5rem; font-size: 1.0625rem;">Hardware automation system built with infrared sensor arrays, custom electronic circuitry, and C/C++ microcontrollers.</p>
+                    <h3 style="font-size: 1.35rem; font-weight: 600;">Arduino IR Sensor Automation</h3>
+                    <p style="color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem;">Hardware automation system built with infrared sensor arrays, custom electronic circuitry, and C/C++ microcontrollers.</p>
                 </div>
-                <span style="color: var(--accent); font-weight: 600; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.18em;">Active</span>
+                <span style="color: var(--accent); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.18em;">Active</span>
             </div>
-            <div style="margin-top: 1rem; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.22em; color: var(--muted);">Embedded Systems &amp; Hardware</div>
+            <div style="margin-top: 1rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.22em; color: var(--muted);">Embedded Systems &amp; Hardware</div>
         </article>
     </div>
 </section>
@@ -231,17 +270,17 @@
 <section id="impact" style="padding: var(--section) var(--gutter);">
     <div class="reveal-up">
         <div class="eyebrow"><div class="eyebrow-dot"></div><span>By The Numbers</span></div>
-        <h2 style="font-family: var(--font-display); font-size: 3.25rem; text-transform: uppercase; margin-top: 1.5rem;">Measured Rigor.</h2>
+        <h2 class="section-heading" style="font-family: var(--font-display); font-size: 3.25rem; text-transform: uppercase; margin-top: 1.5rem;">Measured Rigor.</h2>
     </div>
 
-    <dl style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; border-top: 1px solid var(--line); margin-top: 4rem; padding-top: 2.5rem;">
+    <dl style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 2rem;">
         <div class="reveal-up" style="transition-delay: 0.1s;">
-            <dd style="font-family: var(--font-display); font-size: 7.5rem; line-height: 1; color: var(--foreground); transition: color 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--foreground)'">3</dd>
-            <dt style="color: var(--muted); text-transform: uppercase; letter-spacing: 0.14em; margin-top: 1rem;">Core Academic Foundations (Math, Physics, CS)</dt>
+            <dd style="font-family: var(--font-display); font-size: 5.5rem; line-height: 1; color: var(--foreground);">3</dd>
+            <dt style="color: var(--muted); text-transform: uppercase; letter-spacing: 0.14em; margin-top: 0.75rem; font-size: 0.85rem;">Core Academic Foundations (Math, Physics, CS)</dt>
         </div>
-        <div class="reveal-up" style="transition-delay: 0.25s;">
-            <dd style="font-family: var(--font-display); font-size: 7.5rem; line-height: 1; color: var(--foreground); transition: color 0.3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--foreground)'">100%</dd>
-            <dt style="color: var(--muted); text-transform: uppercase; letter-spacing: 0.14em; margin-top: 1rem;">Commitment to High Performance</dt>
+        <div class="reveal-up" style="transition-delay: 0.2s;">
+            <dd style="font-family: var(--font-display); font-size: 5.5rem; line-height: 1; color: var(--foreground);">100%</dd>
+            <dt style="color: var(--muted); text-transform: uppercase; letter-spacing: 0.14em; margin-top: 0.75rem; font-size: 0.85rem;">Commitment to High Performance</dt>
         </div>
     </dl>
 </section>
@@ -250,75 +289,74 @@
 <section id="voices" style="padding: var(--section) var(--gutter);">
     <div class="reveal-up">
         <div class="eyebrow"><div class="eyebrow-dot"></div><span>Highlights</span></div>
-        <h2 style="font-family: var(--font-display); font-size: 3.25rem; text-transform: uppercase; margin-top: 1.5rem;">Milestones &amp; Presentations.</h2>
+        <h2 class="section-heading" style="font-family: var(--font-display); font-size: 3.25rem; text-transform: uppercase; margin-top: 1.5rem;">Milestones &amp; Presentations.</h2>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 4rem;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
         <div class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 1rem; border-radius: 4px; transition-delay: 0.1s;">
-            <img src="{% static 'portfolio/images/talentshow.png' %}" alt="Technical Showcase" style="width: 100%; height: 220px; object-fit: cover;">
-            <p style="color: var(--muted); margin-top: 1rem; font-size: 0.8125rem; text-align: center; text-transform: uppercase; letter-spacing: 0.18em;">Technical Presentation</p>
+            <img src="{% static 'portfolio/images/talentshow.png' %}" alt="Technical Showcase" style="width: 100%; height: 200px; object-fit: cover;">
+            <p style="color: var(--muted); margin-top: 1rem; font-size: 0.75rem; text-align: center; text-transform: uppercase; letter-spacing: 0.18em;">Technical Presentation</p>
         </div>
-        <div class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 1rem; border-radius: 4px; transition-delay: 0.25s;">
-            <img src="{% static 'portfolio/images/comp.png' %}" alt="Recognition" style="width: 100%; height: 220px; object-fit: cover;">
-            <p style="color: var(--muted); margin-top: 1rem; font-size: 0.8125rem; text-align: center; text-transform: uppercase; letter-spacing: 0.18em;">Award &amp; Recognition</p>
+        <div class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 1rem; border-radius: 4px; transition-delay: 0.2s;">
+            <img src="{% static 'portfolio/images/comp.png' %}" alt="Recognition" style="width: 100%; height: 200px; object-fit: cover;">
+            <p style="color: var(--muted); margin-top: 1rem; font-size: 0.75rem; text-align: center; text-transform: uppercase; letter-spacing: 0.18em;">Award &amp; Recognition</p>
         </div>
-        <div class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 1rem; border-radius: 4px; transition-delay: 0.4s;">
-            <img src="{% static 'portfolio/images/seminar.png' %}" alt="Seminar" style="width: 100%; height: 220px; object-fit: cover;">
-            <p style="color: var(--muted); margin-top: 1rem; font-size: 0.8125rem; text-align: center; text-transform: uppercase; letter-spacing: 0.18em;">Academic Seminars</p>
+        <div class="reveal-up" style="background: var(--surface); border: 1px solid var(--line); padding: 1rem; border-radius: 4px; transition-delay: 0.3s;">
+            <img src="{% static 'portfolio/images/seminar.png' %}" alt="Seminar" style="width: 100%; height: 200px; object-fit: cover;">
+            <p style="color: var(--muted); margin-top: 1rem; font-size: 0.75rem; text-align: center; text-transform: uppercase; letter-spacing: 0.18em;">Academic Seminars</p>
         </div>
     </div>
 </section>
 
 <!-- Contact Footer -->
 <footer id="contact" style="padding-top: var(--section); padding-inline: var(--gutter);">
-    <div class="reveal-up" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 3rem;">
+    <div class="reveal-up footer-main-row" style="display: flex; justify-content: space-between; align-items: center; gap: 3rem;">
         <!-- Left Side: Copy & Email & Social Links -->
-        <div style="flex: 1; min-width: 300px;">
+        <div style="flex: 1; min-width: 280px;">
             <div class="eyebrow"><div class="eyebrow-dot"></div><span>Let's Build</span></div>
-            <h2 style="font-family: var(--font-display); font-size: 5rem; text-transform: uppercase; line-height: 0.95; margin-top: 1.5rem; max-width: 18ch;">
+            <h2 class="section-heading" style="font-family: var(--font-display); font-size: 4rem; text-transform: uppercase; line-height: 0.95; margin-top: 1.5rem; max-width: 18ch;">
                 Have something the world says can't be done?
             </h2>
-            <p style="font-size: 1.375rem; color: var(--muted); margin-top: 2rem; max-width: 44ch;">
+            <p style="font-size: 1.125rem; color: var(--muted); margin-top: 1.5rem; max-width: 44ch;">
                 That's usually where I start. I read every message I'm sent.
             </p>
 
-            <a href="mailto:mossandayambaje@gmail.com" style="display: inline-flex; align-items: baseline; gap: 1rem; font-family: var(--font-sans); font-size: 3.25rem; font-weight: 600; color: var(--foreground); margin-top: 3rem; transition: transform 0.34s ease, color 0.34s ease;" onmouseover="this.style.color='var(--accent)'; this.style.transform='translateX(14px)';" onmouseout="this.style.color='var(--foreground)'; this.style.transform='translateX(0)';">
+            <a class="footer-email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=mossandayambaje@gmail.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: baseline; gap: 1rem; font-family: var(--font-sans); font-size: 2.5rem; font-weight: 600; color: var(--foreground); margin-top: 2.5rem; transition: transform 0.34s ease, color 0.34s ease;" onmouseover="this.style.color='var(--accent)'; this.style.transform='translateX(10px)';" onmouseout="this.style.color='var(--foreground)'; this.style.transform='translateX(0)';">
                 mossandayambaje@gmail.com ↗
             </a>
 
-            <!-- Social Links (GitHub & LinkedIn) -->
-            <div style="display: flex; gap: 2rem; margin-top: 2.5rem; align-items: center;">
-                <a href="https://github.com/Moss-codes/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.75rem; font-size: 1.125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--foreground); transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='var(--accent)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.color='var(--foreground)'; this.style.transform='translateY(0)';">
-                    <i class="fa-brands fa-github" style="font-size: 1.5rem;"></i> GitHub ↗
+            <!-- Social Links -->
+            <div style="display: flex; gap: 1.5rem; margin-top: 2rem; align-items: center; flex-wrap: wrap;">
+                <a href="https://github.com/MossCodes" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--foreground); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent)';" onmouseout="this.style.color='var(--foreground)';">
+                    <i class="fa-brands fa-github" style="font-size: 1.25rem;"></i> GitHub ↗
                 </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mossandayambaje@gmail.com" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.75rem; font-size: 1.125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--foreground); transition: color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.color='var(--accent)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.color='var(--foreground)'; this.style.transform='translateY(0)';">
-                    <i class="fa-brands fa-linkedin" style="font-size: 1.5rem;"></i> LinkedIn ↗
+                <a href="https://linkedin.com/in/mossa-ndayambaje" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--foreground); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent)';" onmouseout="this.style.color='var(--foreground)';">
+                    <i class="fa-brands fa-linkedin" style="font-size: 1.25rem;"></i> LinkedIn ↗
                 </a>
             </div>
         </div>
 
         <!-- Right Side: Circular Profile Picture -->
-        <div style="flex-shrink: 0; display: flex; justify-content: center; align-items: center;">
-            <div style="width: 22rem; height: 22rem; border-radius: 50%; overflow: hidden; border: 2px solid rgba(243, 241, 234, 0.8); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='var(--accent)';" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(243, 241, 234, 0.8)';">
+        <div class="footer-profile-container" style="flex-shrink: 0; display: flex; justify-content: center; align-items: center;">
+            <div class="footer-profile-pic" style="width: 18rem; height: 18rem; border-radius: 50%; overflow: hidden; border: 2px solid rgba(243, 241, 234, 0.8); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='var(--accent)';" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(243, 241, 234, 0.8)';">
                 <img src="{% static 'portfolio/images/profile.png' %}" alt="Mossa Ndayambaje" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
         </div>
     </div>
 
     <!-- Bottom Footer Bar -->
-    <div style="margin-top: var(--section); border-top: 1px solid var(--line); padding: 3rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2.5rem;">
+    <div style="margin-top: var(--section); border-top: 1px solid var(--line); padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
         <div>
-            <p style="font-family: var(--font-display); font-size: 3.25rem; line-height: 1;">MossCodes</p>
-            <p style="font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.22em; color: var(--muted); margin-top: 1rem;">Designed &amp; built with conviction.</p>
+            <p style="font-family: var(--font-display); font-size: 2.5rem; line-height: 1;">MossCodes</p>
+            <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.22em; color: var(--muted); margin-top: 0.5rem;">Designed &amp; built with conviction.</p>
         </div>
         <div>
-            <p style="font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted);">&copy; 2026 Mossa Ndayambaje. All rights reserved.</p>
+            <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted);">&copy; 2026 Mossa Ndayambaje. All rights reserved.</p>
         </div>
     </div>
 </footer>
 
 <script>
-    // Smooth Hero Portrait Zoom Script
     const heroPortrait = document.getElementById("heroPortrait");
     const heroImage = document.getElementById("heroImage");
 
